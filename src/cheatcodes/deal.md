@@ -23,13 +23,13 @@ If the alternative signature of `deal` is used, then we can additionally specify
 ### Examples
 
 ```solidity
-address alice = address(1);
+address alice = makeAddr("alice");
 vm.deal(alice, 1 ether);
 log_uint256(alice.balance); // 1000000000000000000
 ```
 
 ```solidity
-address alice = address(1);
+address alice = makeAddr("alice");
 deal(address(DAI), alice, 1 ether); // import StdUtils.sol first
 log_uint256(address(DAI).balanceOf(alice); // 1000000000000000000
 ```
